@@ -1,0 +1,427 @@
+:root {
+  --groc: #ffff00;
+  /* --fondo: #444444; */
+  --fondo: #1f2029;
+  --lletra: #c4c3ca;
+  --lletraGroc: #ffeba7;
+  --fondoHeader: #2b2e38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PROVA LUPA */
+
+
+/* ANIMACIÓ INTRO */
+
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+  background: #444444;
+  transition: 1s;
+}
+
+.intro p{
+  color:lightyellow;
+  font-size: 1.6rem;
+  margin-top: 10px;
+}
+.logo{
+  font-size: 2.5rem;
+  color: yellow;
+}
+
+.part-logo{
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  bottom:-20px;
+  opacity: 0;
+}
+
+.part-logo.active {
+  bottom: 0;
+  opacity:1;
+  transition: ease-in-out.5s;
+}
+
+.part-logo.fade{
+  bottom: 250px;
+  opacity: 0;
+  transition: ease-in-out .5s;
+}
+
+.contingut{
+  width: 100%;
+  padding: 50px;
+  font-size: 2rem;
+}
+
+.intro img{
+  width: 390px;
+  top: 150px;
+  position: absolute;
+}
+
+/* CSS MAIN */
+
+body {
+  background: var(--fondo);
+  font-family: 'Open Sans', sans-serif;
+  /* width: 90%;
+  margin: auto; */
+}
+
+.contenidor {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--fondoHeader);
+  padding: 15px 12%;
+  transition: all .50s ease;
+}
+
+.logoNav {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.logoNav{
+  color: var(--groc);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+
+
+.navbar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin:0 auto;
+}
+
+
+.navbar a{
+  text-decoration: none;
+  color: var(--lletra);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all .50s ease;
+}
+
+.navbar a:hover{
+  color: var(--groc);
+}
+
+.navbar a.actiu{
+  color: var(--groc);
+}
+
+.inici{
+  display: flex;
+  align-items: center;
+}
+
+.inici a{
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--lletra);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+}
+
+.user i{
+  color: var(--lletra);
+  font-size: 28px;
+  margin-right: 7px;
+}
+
+.inici a:hover{
+  text-decoration: none;
+  color: var(--groc);
+}
+
+.inici i:hover{
+  text-decoration: none;
+  color: var(--groc);
+}
+
+
+#menu-icon{
+  font-size: 35px;
+  color: var(--lletra);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+#menu-icon i:hover{
+  text-decoration: none;
+  color: var(--groc);
+}
+
+
+
+
+.pelicula_portada {
+  font-size: 16px;
+  min-height: 40.62rem;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../imatges/backdrop.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.pelicula_portada .contenidor {
+  margin: 0 auto;
+  margin-bottom: 3.25em;
+}
+
+.pelicula_portada .titol {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.pelicula_portada .sinopsis {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.pelicula_portada .boto {
+  background: rgba(0, 0, 0, .50);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: white;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.pelicula_portada .boto:hover {
+  background: white;
+  color: black;
+}
+
+.pelicula_portada .boto span {
+  margin-right: 1.25em;
+}
+
+.contenidor_titol_controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenidor_titol_controls h3 {
+  color: white;
+  font-size: 30px;
+}
+
+.contenidor_titol_controls .indicadors button {
+  background: white;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenidor_titol_controls .indicadors button:hover,
+.contenidor_titol_controls .indicadors button.actiu {
+  background: var(--groc);
+}
+
+
+.pelicula_recomanada {
+  margin-bottom: 70px;
+
+}
+
+.pelicula_recomanada .contenidor_principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.pelicula_recomanada .contenidor_principal .fletxa_esq,
+.pelicula_recomanada .contenidor_principal .fletxa_dre {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+  z-index: 500;
+  transition: .2s ease all;
+}
+
+.pelicula_recomanada .contenidor_principal .fletxa_esq:hover,
+.pelicula_recomanada .contenidor_principal .fletxa_dre:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.pelicula_recomanada .contenidor_principal .fletxa_esq {
+  left: 0;
+}
+
+.pelicula_recomanada .contenidor_principal .fletxa_dre {
+  right: 0;
+}
+
+.pelicula_recomanada .contenidor_carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.pelicula_recomanada .contenidor_carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.pelicula_recomanada .contenidor_carousel .carousel .pelicula {
+  min-width: 20%;
+  transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.pelicula_recomanada .contenidor_carousel .carousel .pelicula.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.pelicula_recomanada .contenidor_carousel .carousel .pelicula img {
+  width: 100%;
+  vertical-align: top;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+  .pelicula_portada {
+    font-size: 14px;
+  }
+
+  .pelicula_portada .sinopsis {
+    max-width: 100%;
+  }
+
+  .pelicula_recomanada .contenidor_carousel {
+    overflow: visible;
+  }
+
+  .pelicula_recomanada .contenidor_carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .pelicula_recomanada .indicadors,
+  .pelicula_recomanada .fletxa_esq,
+  .pelicula_recomanada .fletxa_dre {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1280px){
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+
+  .navbar a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1090px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: 8px;
+    background: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+
+  }
+
+  .navbar a{
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+  }
+
+  .navbar a:hover{
+    color: var(--groc);
+    transform: translateY(5px);
+  }
+
+  .navbar a.actiu{
+    color: var(--groc);
+  }
+  .navbar.open{
+    right: 2%;
+  }
+  
+}

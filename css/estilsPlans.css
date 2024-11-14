@@ -1,0 +1,124 @@
+:root {
+    --groc: #ffff00;
+    --fondo: #444444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.taula_preus {
+    padding: 4rem 0rem;
+}
+
+.taula_preus .detalls {
+    width: 90%;
+    max-width: 50rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.taula_preus .detalls h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.taula_preus .detalls p {
+    font-size: 15px;
+}
+
+.taula_preus .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 0rem;
+    padding: 2rem;
+}
+
+.taula_preus .grid .box {
+    width: 25rem;
+    border: 1px solid white;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.taula_preus .grid .box .titol {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.taula_preus .grid .box .preu {
+    margin-bottom: 2rem;
+}
+
+.taula_preus .grid .box .preu b {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.taula_preus .grid .box .inclou > * {
+    color: black;
+    padding: 8px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.taula_preus .grid .box .boto button {
+    width: 100%;
+    margin: 25px 0px 0px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #3a7bd5, #3a6073);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.taula_preus .grid .box.pro {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, #3a7bd5, #3a6073);
+}
+
+.taula_preus .grid .box.pro .titol {
+    color: white;
+}
+
+.taula_preus .grid .box.pro .preu {
+    color: white;
+}
+
+.taula_preus .grid .box.pro .inclou > * {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.taula_preus .grid .box.pro .boto button {
+    background: white;
+    color: #3a6073;
+}
+
+@media (max-width:800px){
+    .taula_preus .grid {
+        gap: 20px;
+    }
+
+    .taula_preus .grid .box.pro {
+        transform: scale(1);
+    }
+}

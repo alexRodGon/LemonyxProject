@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lemonyx</title>
+    <link rel="shortcut icon" href="imatges/Lemonyx.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/estilsPelis.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logoNav"><img src="imatges/LogoHeader.png" alt=""></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="pelis.html" class="actiu">Pelicules</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="plans.html">Plans</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+
+        <div class="inici">
+            <a href="login.view.php" class="user"><i class="input-icon uil uil-user"></i>Iniciar Sessió</a>
+            <div class="bx bx-menu" id="menu-icon"><i class="fa fa-bars" style="font-size:24px"></i></div>
+        </div>
+
+    </header>
+
+
+
+    <div id="contingut">
+
+        <div id="cercar">
+            <i class="fa fa-search"></i>
+            <input type="text" id="myInput" placeholder="Busca la teva pelicula" title="Type in a name">
+        </div>
+        <span id="resposta"></span>
+
+    </div>
+
+    
+    <div class="titols">
+        <h3>Películes Drama</h3>
+    </div>
+
+    <div class="contenidor">
+        <div class="grid-container" id="gridContainer"></div>
+    </div>
+
+
+    <div class="titols">
+        <h3>Películes Comedia</h3>
+    </div>
+
+    <div class="contenidor">
+        <div class="grid-container" id="gridContainerComedia"></div>
+    </div>
+    
+
+    <div class="titols">
+        <h3>Películes Accio</h3>
+    </div>
+
+    <div class="contenidor">
+        <div class="grid-container" id="gridContainerAccio"></div>
+    </div>
+
+
+
+    <div id="miPopup" class="popup">
+        <div class="popup-contenido">
+            <h2>Este es mi popup</h2>
+            <p>Este es el contenido del popup</p>
+            <button id="cerrarPopup">Cerrar</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/provaAjax.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/gridAccio.js"></script>
+    <script src="js/gridComedia.js"></script>
+    
+
+    
+
+
+
+
+    </div>
+
+</body>
+
+</html>
